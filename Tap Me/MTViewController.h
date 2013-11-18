@@ -7,17 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface MTViewController : UIViewController<UIAlertViewDelegate>{
+@interface MTViewController : UIViewController <UIAlertViewDelegate>
+{
 
     IBOutlet UILabel *scoreLabel;
     IBOutlet UILabel *timerLable;
     
-    NSInteger count;
-    NSInteger seconds;
-    NSTimer *timer;
+    NSInteger   count;
+    NSInteger   seconds;
+    NSTimer     *timer;
+    
+    // Add these AVAudioPlayer objects!
+    AVAudioPlayer       *buttonBeep;
+    AVAudioPlayer       *secondBeep;
+    AVAudioPlayer       *backgroundMusic;
 }
 
--(IBAction)buttonPressed;
+-(IBAction) buttonPressed;
 
 @end
